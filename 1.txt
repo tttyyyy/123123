@@ -1,0 +1,112 @@
+CREATE TABLE ff3(
+　　name VARCHAR(16),
+    HP INT,
+    最大HP INT,
+    MP INT,
+    最大MP INT,
+    力 INT,
+　　速 INT,
+　　体 INT,
+　　知 INT,
+　　精 INT,
+　　所持金 INT,
+　　EXP INT,
+    レベル INT
+);
+
+
+2
+SELECT * FROM exam;
+
+2-2
+SELECT * FROM exam WHERE id = 10;
+
+3-1
+$pdo = new PDD("mysql:host = 192.168.137.160;dbname = database;charset = utf8mb4;$test, $pass,);
+
+3-2
+$sql = 'INSERT card SET'
+$pre = 
+$res =
+var_dump(res);
+
+
+
+
+4
+<?php
+
+$hash = password_hash($pass, PASSWORD_DEFAULT, ['cost' => 12]);
+echo $hash, "￥n";
+
+
+
+5-1
+<?php
+
+function dice_6() {
+    return mt_rand(1,6):
+}
+
+
+5-2
+<?php
+
+2D6+2
+1d4+2d6+3
+1D10+2d6-1d4-2
+1D10+2d6-1d4-2+2d6
+-------------------
+2D6 2
+
+1d4 2d6 3
+   
+
+
+
+6
+BEGIN; -- ドランザクション開始
+-- userテーブルの残高(money)を取得
+SELECT * FROM user WHERE user_id = 2016 FOR UPDATE;
+
+-- userテーブルのmoneyの値を100、減算
+UPDATE user SET money = money - 100 WHERE　user_id = 2016;
+
+-- ser_cardテーブルにinsert
+INSERT INTO user_card(user_id, card_id, created)
+       VALUES(2016, 114, now());
+
+COMMIT; -- ドランザクション終了
+
+
+7
+<?php
+
+function item_use($pc, $item_id) {
+   //
+   switch($item_id) {
+       case 1: 
+           $pc->set_hp( $pc->get_hp() + 100);
+           break;
+
+       case 2:
+           $pc->set_mp( $pc->get_mp() + 50);
+           break;
+
+       case 3:
+           $pc->set_hp( $pc->get_hp() + (int)($pc->get_max_hp() / 0.5));
+           $pc->set_mp( $pc->get_mp() + (int)($pc->get_max_mp() / 0.5));
+           break;
+
+       case 4:
+           $pc->set_hp( $pc->get_hp() + (int)($pc->get_max_hp() / 0.5));
+           $pc->set_mp( $pc->get_mp() + (int)($pc->get_max_mp() / 0.5));
+           break;
+
+       case 5:
+           $pc->set_exp( $pc->get_exp() + 1000 );
+           break;
+
+       default:
+           echo
+           break;
